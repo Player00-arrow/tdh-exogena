@@ -197,6 +197,7 @@ footer{background:var(--negro);color:var(--gris-300);padding:40px 24px 24px;marg
       <button class="nav-btn" data-view="plazos">Plazos y sanciones</button>
       <button class="nav-btn" data-view="presentacion">Forma de presentación</button>
     </div>
+          <button class="nav-btn" data-view="rf-guia" style="background:linear-gradient(90deg,rgba(212,160,23,.1),transparent);border-left-color:#d4a017;color:#7a5500;font-weight:600;margin-top:8px">⭐ Programa de Auditoría RF</button>
     <div class="sidebar-section">
       <div class="sidebar-title">Formatos · Capítulo 5</div>
       <div id="navFormatos"></div>
@@ -286,7 +287,580 @@ footer{background:var(--negro);color:var(--gris-300);padding:40px 24px 24px;marg
         <div class="callout callout-warn"><div class="tag">Contingencia</div><p>Si hay falla en los SIE atribuible a la DIAN, la resolución permite presentación por contingencia. Siempre conservar evidencia del intento fallido (captura de pantalla, mesa de ayuda).</p></div>
       </div>
     </div>
-    <div id="formatosContainer"></div>
+    <div id="formatosContainer">
+<!-- ============================================================
+     VISTA: RECOMENDACIONES REVISORÍA FISCAL
+     ============================================================ -->
+<div class="view" id="view-rf-guia">
+
+  <!-- HERO de la sección -->
+  <div style="background:linear-gradient(135deg,#0f4a24,#1e7a3e,#0d5c6b);border-radius:14px;padding:36px 32px;color:white;margin-bottom:24px;position:relative;overflow:hidden;">
+    <div style="position:absolute;top:-40px;right:-40px;width:220px;height:220px;background:radial-gradient(circle,rgba(212,160,23,.2),transparent 70%);border-radius:50%"></div>
+    <div style="position:relative">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:5px 14px;border-radius:20px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;margin-bottom:18px">
+        <span style="width:6px;height:6px;background:#f0c040;border-radius:50%;display:inline-block"></span>
+        Uso exclusivo · Revisoría Fiscal TDH S.A.
+      </div>
+      <h1 style="font-family:'Fraunces',Georgia,serif;font-size:clamp(26px,4vw,42px);font-weight:900;letter-spacing:-1px;line-height:1.1;margin-bottom:14px">
+        Programa de Auditoría<br><em style="font-weight:400;color:#f0c040">Información Exógena DIAN</em>
+      </h1>
+      <p style="font-size:16px;opacity:.88;max-width:680px;line-height:1.65;margin-bottom:24px">
+        Procedimientos, criterios de conclusión y papeles de trabajo sugeridos para el ciclo completo de revisión del reporte de información exógena tributaria de Transportes del Huila S.A. Basado en estándares NIA y prácticas de auditoría fiscal colombiana.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:20px;border-top:1px solid rgba(255,255,255,.2);padding-top:20px">
+        <div><div style="font-size:10px;text-transform:uppercase;letter-spacing:1.2px;opacity:.6;margin-bottom:3px">Norma de referencia</div><div style="font-weight:700;font-size:14px">Resolución DIAN 000227/2025</div></div>
+        <div><div style="font-size:10px;text-transform:uppercase;letter-spacing:1.2px;opacity:.6;margin-bottom:3px">Estándar de auditoría</div><div style="font-weight:700;font-size:14px">NIA 315 · NIA 500 · NIA 580</div></div>
+        <div><div style="font-size:10px;text-transform:uppercase;letter-spacing:1.2px;opacity:.6;margin-bottom:3px">Elaborado por</div><div style="font-weight:700;font-size:14px">Revisoría Fiscal TDH S.A.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ÍNDICE DE FASES -->
+  <div style="background:white;border:1px solid #e0e0e0;border-radius:14px;padding:28px 32px;margin-bottom:24px">
+    <h2 style="font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:22px;color:#1a1a1a;margin-bottom:20px;letter-spacing:-.3px">Ciclo de auditoría — 3 fases</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px">
+      <a href="#fase1" style="text-decoration:none;display:block;background:linear-gradient(135deg,#e8f5ec,#f5fbf7);border:1px solid #b8dfc4;border-left:4px solid #1e7a3e;border-radius:10px;padding:18px 20px;transition:all .2s">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:#1e7a3e;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px">Fase I</div>
+        <div style="font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:16px;color:#0f4a24;margin-bottom:4px">Planificación y preparación</div>
+        <div style="font-size:12.5px;color:#424242">Antes del reporte · 6 procedimientos</div>
+      </a>
+      <a href="#fase2" style="text-decoration:none;display:block;background:linear-gradient(135deg,#e8f4f7,#f5fafb);border:1px solid #a8d4de;border-left:4px solid #0d5c6b;border-radius:10px;padding:18px 20px;transition:all .2s">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:#0d5c6b;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px">Fase II</div>
+        <div style="font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:16px;color:#0a3d49;margin-bottom:4px">Ejecución y validación</div>
+        <div style="font-size:12.5px;color:#424242">Durante el reporte · 10 procedimientos</div>
+      </a>
+      <a href="#fase3" style="text-decoration:none;display:block;background:linear-gradient(135deg,#fef8e7,#fdf5d9);border:1px solid #e8d7a0;border-left:4px solid #d4a017;border-radius:10px;padding:18px 20px;transition:all .2s">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:#b8860b;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px">Fase III</div>
+        <div style="font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:16px;color:#7a5500;margin-bottom:4px">Cierre y archivo</div>
+        <div style="font-size:12.5px;color:#424242">Después del reporte · 5 procedimientos</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ===================== FASE I ===================== -->
+  <div id="fase1" style="background:white;border:1px solid #e0e0e0;border-radius:14px;margin-bottom:20px;overflow:hidden">
+    <div style="background:linear-gradient(135deg,#0f4a24,#1e7a3e);padding:22px 32px;color:white">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.4px;color:#f0c040;margin-bottom:8px">FASE I · ANTES DEL REPORTE</div>
+      <h2 style="font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:24px;letter-spacing:-.3px">Planificación y preparación</h2>
+      <p style="font-size:14px;opacity:.85;margin-top:8px;max-width:600px">Actividades que el equipo de Revisoría Fiscal debe ejecutar antes de que el área contable inicie la generación de los archivos XML. El objetivo es identificar riesgos antes de que se conviertan en errores reportados.</p>
+    </div>
+    <div style="padding:32px">
+
+      <!-- P-01 -->
+      <div style="border:1px solid #e0e0e0;border-radius:10px;margin-bottom:18px;overflow:hidden">
+        <div style="background:#f5f7f3;padding:16px 20px;display:flex;align-items:center;gap:14px;border-bottom:1px solid #e0e0e0">
+          <div style="width:36px;height:36px;background:#1e7a3e;color:white;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:13px;flex-shrink:0">P01</div>
+          <div>
+            <div style="font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:17px;color:#1a1a1a">Verificación de obligaciones y universo de reportes</div>
+            <div style="font-size:12px;color:#757575;margin-top:2px">Riesgo: omisión de formatos obligatorios · Prioridad: ⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+        <div style="padding:20px 22px">
+          <p style="color:#424242;margin-bottom:12px"><strong>Objetivo:</strong> Confirmar cuáles formatos del Capítulo 5 aplican a TDH para el año gravable a reportar y que no se omita ninguno.</p>
+          <div style="background:#e8f5ec;border-left:3px solid #1e7a3e;border-radius:6px;padding:14px 16px;margin-bottom:14px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#1e7a3e;margin-bottom:8px">Procedimientos a ejecutar</div>
+            <ol style="margin-left:18px;color:#2d2d2d;font-size:13.5px;line-height:1.8">
+              <li>Confirmar que TDH supera los 2.400 UVT de ingresos brutos (Num. 5, Art. 1.3.1.1). Obtener la declaración de renta del año anterior como respaldo.</li>
+              <li>Verificar si TDH es agente de retención (Num. 6) — esto determina obligatoriedad del 1001 y 1003 independientemente del tope de ingresos.</li>
+              <li>Revisar si TDH participó en consorcios, uniones temporales, mandatos o cuentas en participación durante el año (obliga Formatos 5247/5248).</li>
+              <li>Identificar si TDH tiene socios personas jurídicas o naturales → Formato 1010 obligatorio.</li>
+              <li>Revisar si hubo compraventa de acciones o cuotas no listadas en bolsa → Formatos 1001 (5089) y 1007 (4020/4021).</li>
+              <li>Cruzar la lista de formatos identificados con la resolución y construir la <strong>matriz de obligaciones del año</strong> (PT-01).</li>
+            </ol>
+          </div>
+          <div style="background:#fef8e7;border-left:3px solid #d4a017;border-radius:6px;padding:14px 16px;margin-bottom:14px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#b8860b;margin-bottom:6px">Papel de trabajo sugerido — PT-01</div>
+            <p style="font-size:13px;color:#2d2d2d;margin:0">Matriz de formatos aplicables: columnas → Formato | Versión | Artículo | ¿Aplica TDH? (Sí/No) | Justificación | Responsable contable | Fecha estimada entrega | Observaciones RF. Firmar con fecha por el auditor que ejecuta el procedimiento.</p>
+          </div>
+          <div style="background:#fdeeec;border-left:3px solid #c0392b;border-radius:6px;padding:12px 16px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#c0392b;margin-bottom:6px">Criterio de conclusión</div>
+            <p style="font-size:13px;color:#2d2d2d;margin:0">La Revisoría Fiscal concluye que el universo de formatos es completo cuando la matriz PT-01 está firmada, todos los formatos están justificados y el área contable ha confirmado por escrito que los formatos identificados serán preparados.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- P-02 -->
+      <div style="border:1px solid #e0e0e0;border-radius:10px;margin-bottom:18px;overflow:hidden">
+        <div style="background:#f5f7f3;padding:16px 20px;display:flex;align-items:center;gap:14px;border-bottom:1px solid #e0e0e0">
+          <div style="width:36px;height:36px;background:#1e7a3e;color:white;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:13px;flex-shrink:0">P02</div>
+          <div>
+            <div style="font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:17px;color:#1a1a1a">Evaluación del control interno contable sobre el reporte</div>
+            <div style="font-size:12px;color:#757575;margin-top:2px">Riesgo: debilidades de control que generan errores sistemáticos · Prioridad: ⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+        <div style="padding:20px 22px">
+          <p style="color:#424242;margin-bottom:12px"><strong>Objetivo:</strong> Entender cómo el área contable prepara los datos del reporte, quién los revisa internamente y qué controles existen para detectar errores antes del envío.</p>
+          <div style="background:#e8f5ec;border-left:3px solid #1e7a3e;border-radius:6px;padding:14px 16px;margin-bottom:14px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#1e7a3e;margin-bottom:8px">Procedimientos a ejecutar</div>
+            <ol style="margin-left:18px;color:#2d2d2d;font-size:13.5px;line-height:1.8">
+              <li>Indagar con el contador y auxiliares contables sobre el proceso de extracción de datos (¿desde qué módulo del sistema? ¿Excel, SAP, Siigo, World Office?).</li>
+              <li>Verificar si existe un instructivo interno o manual de procedimientos para la preparación del reporte exógeno. Si existe, evaluar su vigencia y si está actualizado con la Resolución 000227.</li>
+              <li>Identificar si hay segregación de funciones: ¿la persona que prepara el XML es distinta a quien lo revisa y envía?</li>
+              <li>Revisar si utilizan el <strong>Prevalidador Tributario DIAN</strong> antes del envío (obligatorio como práctica mínima de control).</li>
+              <li>Verificar si los reportes del año anterior presentaron inconsistencias o correcciones extemporáneas (señal de debilidades de control).</li>
+            </ol>
+          </div>
+          <div style="background:#fef8e7;border-left:3px solid #d4a017;border-radius:6px;padding:14px 16px;margin-bottom:14px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#b8860b;margin-bottom:6px">Papel de trabajo sugerido — PT-02</div>
+            <p style="font-size:13px;color:#2d2d2d;margin:0">Cuestionario de control interno: lista de preguntas (Sí/No/N-A) con columna de observaciones y evidencia obtenida. Calificar el riesgo residual por área (Alto/Medio/Bajo). Documentar la fuente de información (entrevista, inspección del sistema, revisión de documentos).</p>
+          </div>
+          <div style="background:#fdeeec;border-left:3px solid #c0392b;border-radius:6px;padding:12px 16px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#c0392b;margin-bottom:6px">Criterio de conclusión</div>
+            <p style="font-size:13px;color:#2d2d2d;margin:0">Si se detectan debilidades significativas (sin segregación de funciones, sin uso del Prevalidador, sin instructivo actualizado), Revisoría Fiscal debe emitir una <strong>comunicación de hallazgos preliminar</strong> al representante legal antes del envío del reporte — no después.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- P-03 -->
+      <div style="border:1px solid #e0e0e0;border-radius:10px;margin-bottom:18px;overflow:hidden">
+        <div style="background:#f5f7f3;padding:16px 20px;display:flex;align-items:center;gap:14px;border-bottom:1px solid #e0e0e0">
+          <div style="width:36px;height:36px;background:#1e7a3e;color:white;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:13px;flex-shrink:0">P03</div>
+          <div>
+            <div style="font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:17px;color:#1a1a1a">Análisis de cifras del año gravable vs. año anterior</div>
+            <div style="font-size:12px;color:#757575;margin-top:2px">Riesgo: variaciones atípicas no detectadas · Prioridad: ⭐⭐⭐⭐</div>
+          </div>
+        </div>
+        <div style="padding:20px 22px">
+          <p style="color:#424242;margin-bottom:12px"><strong>Objetivo:</strong> Identificar variaciones significativas entre el año a reportar y el anterior que requieran justificación o que señalen posibles errores.</p>
+          <div style="background:#e8f5ec;border-left:3px solid #1e7a3e;border-radius:6px;padding:14px 16px;margin-bottom:14px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#1e7a3e;margin-bottom:8px">Procedimientos a ejecutar</div>
+            <ol style="margin-left:18px;color:#2d2d2d;font-size:13.5px;line-height:1.8">
+              <li>Obtener el reporte exógeno del año anterior (archivos XML o el reporte del Prevalidador) y comparar los totales por formato.</li>
+              <li>Calcular variaciones absolutas y porcentuales por formato: ingresos totales (1007), pagos totales (1001), pasivos (1009), cuentas por cobrar (1008), retenciones practicadas (1001) y sufridas (1003).</li>
+              <li>Establecer umbral de análisis: variaciones superiores al <strong>15% o $50 millones COP</strong> (o el que defina el criterio de materialidad de la auditoría) deben tener justificación documentada.</li>
+              <li>Cruzar las variaciones con hechos económicos relevantes del año: nuevas rutas, aumento de flota, cambios de clientes, adquisición de vehículos.</li>
+              <li>Identificar conceptos o terceros que aparecen en el año actual pero no en el anterior (o viceversa) — ¿por qué?</li>
+            </ol>
+          </div>
+          <div style="background:#fef8e7;border-left:3px solid #d4a017;border-radius:6px;padding:14px 16px;margin-bottom:14px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#b8860b;margin-bottom:6px">Papel de trabajo sugerido — PT-03</div>
+            <p style="font-size:13px;color:#2d2d2d;margin:0">Tabla comparativa año N vs año N-1 por formato: columnas → Formato | Total año N-1 | Total año N | Variación $ | Variación % | ¿Supera umbral? | Explicación obtenida | Conclusión RF. Adjuntar evidencia de las explicaciones recibidas (correo, acta, nota contable).</p>
+          </div>
+          <div style="background:#fdeeec;border-left:3px solid #c0392b;border-radius:6px;padding:12px 16px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#c0392b;margin-bottom:6px">Criterio de conclusión</div>
+            <p style="font-size:13px;color:#2d2d2d;margin:0">Todas las variaciones que superen el umbral de materialidad deben tener explicación razonable y documentada. Variaciones sin explicación satisfactoria se escalan a hallazgo de auditoría y se profundiza el análisis en Fase II.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- P-04 -->
+      <div style="border:1px solid #e0e0e0;border-radius:10px;margin-bottom:18px;overflow:hidden">
+        <div style="background:#f5f7f3;padding:16px 20px;display:flex;align-items:center;gap:14px;border-bottom:1px solid #e0e0e0">
+          <div style="width:36px;height:36px;background:#1e7a3e;color:white;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:13px;flex-shrink:0">P04</div>
+          <div>
+            <div style="font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:17px;color:#1a1a1a">Verificación de NITs y datos de terceros</div>
+            <div style="font-size:12px;color:#757575;margin-top:2px">Riesgo: NIT inexistentes, mal digitados o dados de baja · Prioridad: ⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+        <div style="padding:20px 22px">
+          <p style="color:#424242;margin-bottom:12px"><strong>Objetivo:</strong> Asegurar que los NITs de los terceros reportados existen, están activos y corresponden a la razón social informada. Un NIT inexistente invalida el registro en el Prevalidador DIAN.</p>
+          <div style="background:#e8f5ec;border-left:3px solid #1e7a3e;border-radius:6px;padding:14px 16px;margin-bottom:14px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#1e7a3e;margin-bottom:8px">Procedimientos a ejecutar</div>
+            <ol style="margin-left:18px;color:#2d2d2d;font-size:13.5px;line-height:1.8">
+              <li>Exportar del sistema contable el maestro de terceros (proveedores, clientes, acreedores) con NIT y razón social.</li>
+              <li>Para una muestra representativa (mínimo los 30 terceros con mayor valor reportado), verificar el NIT en el <strong>portal DIAN (Consulta RUT)</strong>: confirmar que existe, está activo y la razón social coincide.</li>
+              <li>Verificar que el dígito de verificación del NIT sea correcto (error muy frecuente en datos de proveedores antiguos).</li>
+              <li>Identificar si hay registros con NIT 222222222 (cuantías menores): confirmar que el monto acumulado bajo ese NIT es razonable y no esconde terceros identificables que debían reportarse individualmente.</li>
+              <li>Para personas naturales: verificar que la cédula corresponde a la persona física (consulta RNEC o RUES si aplica).</li>
+              <li>Para pagos al exterior: verificar que se usó tipo de documento 42 (con ID fiscal del país) o 43 con NIT 444444001 ascendente (sin ID fiscal).</li>
+            </ol>
+          </div>
+          <div style="background:#fef8e7;border-left:3px solid #d4a017;border-radius:6px;padding:14px 16px;margin-bottom:14px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#b8860b;margin-bottom:6px">Papel de trabajo sugerido — PT-04</div>
+            <p style="font-size:13px;color:#2d2d2d;margin:0">Muestra de terceros verificados: columnas → NIT | Razón social en sistema | Razón social DIAN | ¿Coincide? | DV correcto | Estado RUT | Observación. Documentar la fuente de consulta (captura del portal DIAN con fecha). El criterio de muestra debe documentarse (ej: todos los terceros con pagos/ingresos superiores a 10 SMLMV).</p>
+          </div>
+          <div style="background:#fdeeec;border-left:3px solid #c0392b;border-radius:6px;padding:12px 16px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#c0392b;margin-bottom:6px">Criterio de conclusión</div>
+            <p style="font-size:13px;color:#2d2d2d;margin:0">Si se detectan NITs incorrectos en más del 5% de la muestra, el riesgo escala a Alto y se recomienda depuración completa del maestro de terceros antes del envío. Errores en NITs de los 10 mayores terceros = hallazgo de importancia relativa alta.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- P-05 -->
+      <div style="border:1px solid #e0e0e0;border-radius:10px;margin-bottom:18px;overflow:hidden">
+        <div style="background:#f5f7f3;padding:16px 20px;display:flex;align-items:center;gap:14px;border-bottom:1px solid #e0e0e0">
+          <div style="width:36px;height:36px;background:#1e7a3e;color:white;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:13px;flex-shrink:0">P05</div>
+          <div>
+            <div style="font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:17px;color:#1a1a1a">Verificación de plazos y cronograma de entrega</div>
+            <div style="font-size:12px;color:#757575;margin-top:2px">Riesgo: extemporaneidad (sanción hasta 3% de sumas reportadas) · Prioridad: ⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+        <div style="padding:20px 22px">
+          <p style="color:#424242;margin-bottom:12px"><strong>Objetivo:</strong> Garantizar que TDH presente el reporte dentro del plazo legal fijado por el Decreto de Plazos del año correspondiente, según su NIT.</p>
+          <div style="background:#e8f5ec;border-left:3px solid #1e7a3e;border-radius:6px;padding:14px 16px;margin-bottom:14px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#1e7a3e;margin-bottom:8px">Procedimientos a ejecutar</div>
+            <ol style="margin-left:18px;color:#2d2d2d;font-size:13.5px;line-height:1.8">
+              <li>Consultar el <strong>Decreto de Plazos</strong> vigente (publicado por el Ministerio de Hacienda en enero de cada año) y confirmar la fecha límite según el último dígito del NIT de TDH.</li>
+              <li>Construir un cronograma inverso: fecha límite DIAN → fecha límite de envío por contabilidad → fecha límite de revisión RF → fecha de inicio de extracción de datos.</li>
+              <li>Confirmar que TDH <strong>no es Gran Contribuyente</strong> (si lo es, los plazos son diferentes y más tempranos).</li>
+              <li>Asegurarse que la <strong>firma digital</strong> del representante legal está vigente y renovada antes del plazo. Si no, alertar con mínimo 30 días de anticipación.</li>
+              <li>Establecer un punto de control intermedio: RF revisará un borrador del reporte al menos <strong>10 días hábiles antes</strong> del plazo legal para poder corregir sin extemporaneidad.</li>
+            </ol>
+          </div>
+          <div style="background:#fef8e7;border-left:3px solid #d4a017;border-radius:6px;padding:14px 16px;margin-bottom:14px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#b8860b;margin-bottom:6px">Papel de trabajo sugerido — PT-05</div>
+            <p style="font-size:13px;color:#2d2d2d;margin:0">Cronograma de exógena: tabla con hitos clave, fecha comprometida, fecha real, responsable y estado (Pendiente/En proceso/Completado). Actualizar semanalmente durante el período de preparación. Incluir verificación de vigencia de la firma digital.</p>
+          </div>
+          <div style="background:#fdeeec;border-left:3px solid #c0392b;border-radius:6px;padding:12px 16px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#c0392b;margin-bottom:6px">Criterio de conclusión</div>
+            <p style="font-size:13px;color:#2d2d2d;margin:0">El cronograma debe mostrar que la presentación está programada con al menos 5 días hábiles de margen antes del plazo legal. Si la firma digital no está vigente y el plazo es menor a 15 días, se emite alerta inmediata a la gerencia.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- P-06 -->
+      <div style="border:1px solid #e0e0e0;border-radius:10px;overflow:hidden">
+        <div style="background:#f5f7f3;padding:16px 20px;display:flex;align-items:center;gap:14px;border-bottom:1px solid #e0e0e0">
+          <div style="width:36px;height:36px;background:#1e7a3e;color:white;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:13px;flex-shrink:0">P06</div>
+          <div>
+            <div style="font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:17px;color:#1a1a1a">Definición de materialidad para el reporte exógeno</div>
+            <div style="font-size:12px;color:#757575;margin-top:2px">Riesgo: ausencia de criterio de muestreo → revisión sin foco · Prioridad: ⭐⭐⭐⭐</div>
+          </div>
+        </div>
+        <div style="padding:20px 22px">
+          <p style="color:#424242;margin-bottom:12px"><strong>Objetivo:</strong> Establecer formalmente el umbral de materialidad que guiará la selección de muestras en la Fase II, asegurando que la revisión se concentre en los riesgos más significativos.</p>
+          <div style="background:#e8f5ec;border-left:3px solid #1e7a3e;border-radius:6px;padding:14px 16px;margin-bottom:14px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#1e7a3e;margin-bottom:8px">Procedimientos a ejecutar</div>
+            <ol style="margin-left:18px;color:#2d2d2d;font-size:13.5px;line-height:1.8">
+              <li>Calcular la materialidad global como porcentaje de los ingresos brutos del año (referencia: 0.5% a 1% de ingresos brutos, o el criterio aprobado por el Revisor Fiscal titular).</li>
+              <li>Establecer la materialidad específica para el reporte exógeno: sugiere usar <strong>el 5% de la materialidad global</strong> como umbral individual por tercero.</li>
+              <li>Calcular el umbral en pesos: por ejemplo, si ingresos brutos = $80.000M y materialidad = 1%, el umbral es $800M — todo tercero con transacciones superiores a ese valor entra en la muestra obligatoria.</li>
+              <li>Documentar la decisión de materialidad en una memo firmada por el Revisor Fiscal titular.</li>
+            </ol>
+          </div>
+          <div style="background:#fef8e7;border-left:3px solid #d4a017;border-radius:6px;padding:14px 16px;margin-bottom:14px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#b8860b;margin-bottom:6px">Papel de trabajo sugerido — PT-06</div>
+            <p style="font-size:13px;color:#2d2d2d;margin:0">Memo de materialidad: base de cálculo, porcentaje aplicado, valor en pesos del umbral global, valor del umbral individual por tercero, y firma del Revisor Fiscal titular. Este documento es el ancla de todo el programa de auditoría.</p>
+          </div>
+          <div style="background:#fdeeec;border-left:3px solid #c0392b;border-radius:6px;padding:12px 16px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#c0392b;margin-bottom:6px">Criterio de conclusión</div>
+            <p style="font-size:13px;color:#2d2d2d;margin:0">La materialidad queda documentada y aprobada antes de ejecutar cualquier procedimiento de la Fase II. Sin materialidad definida, no se puede evaluar si un error es significativo o tolerable.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===================== FASE II ===================== -->
+  <div id="fase2" style="background:white;border:1px solid #e0e0e0;border-radius:14px;margin-bottom:20px;overflow:hidden">
+    <div style="background:linear-gradient(135deg,#0a3d49,#0d5c6b);padding:22px 32px;color:white">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.4px;color:#f0c040;margin-bottom:8px">FASE II · DURANTE EL REPORTE</div>
+      <h2 style="font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:24px;letter-spacing:-.3px">Ejecución y validación</h2>
+      <p style="font-size:14px;opacity:.85;margin-top:8px;max-width:600px">Procedimientos de revisión sustantiva sobre los datos del reporte ya preparados por el área contable, antes del envío definitivo a la DIAN. Esta fase es el corazón del trabajo de auditoría sobre exógena.</p>
+    </div>
+    <div style="padding:32px">
+
+      <!-- Cruces de información clave -->
+      <div style="background:#e8f4f7;border:1px solid #a8d4de;border-radius:10px;padding:20px 22px;margin-bottom:20px">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:#0d5c6b;margin-bottom:10px">Los 5 cruces fundamentales que todo revisor fiscal debe ejecutar</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px">
+          <div style="background:white;border:1px solid #c8e8f0;border-radius:8px;padding:12px 14px;font-size:13px;color:#2d2d2d"><strong style="color:#0d5c6b">Cruce 1:</strong> 1001 (retenciones) ↔ Formulario 350</div>
+          <div style="background:white;border:1px solid #c8e8f0;border-radius:8px;padding:12px 14px;font-size:13px;color:#2d2d2d"><strong style="color:#0d5c6b">Cruce 2:</strong> 1007 (ingresos) ↔ Declaración de Renta</div>
+          <div style="background:white;border:1px solid #c8e8f0;border-radius:8px;padding:12px 14px;font-size:13px;color:#2d2d2d"><strong style="color:#0d5c6b">Cruce 3:</strong> 1005/1006 (IVA) ↔ Formularios 300</div>
+          <div style="background:white;border:1px solid #c8e8f0;border-radius:8px;padding:12px 14px;font-size:13px;color:#2d2d2d"><strong style="color:#0d5c6b">Cruce 4:</strong> 1009 (pasivos) ↔ Balance general</div>
+          <div style="background:white;border:1px solid #c8e8f0;border-radius:8px;padding:12px 14px;font-size:13px;color:#2d2d2d"><strong style="color:#0d5c6b">Cruce 5:</strong> 1003 (retenciones sufridas) ↔ Cert. de retención recibidos</div>
+        </div>
+      </div>
+
+      <!-- P-07 -->
+      <div style="border:1px solid #e0e0e0;border-radius:10px;margin-bottom:18px;overflow:hidden">
+        <div style="background:#f0f6f8;padding:16px 20px;display:flex;align-items:center;gap:14px;border-bottom:1px solid #e0e0e0">
+          <div style="width:36px;height:36px;background:#0d5c6b;color:white;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:13px;flex-shrink:0">P07</div>
+          <div>
+            <div style="font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:17px;color:#1a1a1a">Cruce Formato 1001 vs. Formulario 350 (Retenciones)</div>
+            <div style="font-size:12px;color:#757575;margin-top:2px">Riesgo crítico: diferencias entre retenciones declaradas y reportadas · Prioridad: ⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+        <div style="padding:20px 22px">
+          <p style="color:#424242;margin-bottom:12px"><strong>Objetivo:</strong> Verificar que el total de retenciones practicadas reportadas en el Formato 1001 cuadre exactamente con las retenciones declaradas en los Formularios 350 del año.</p>
+          <div style="background:#e8f4f7;border-left:3px solid #0d5c6b;border-radius:6px;padding:14px 16px;margin-bottom:14px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#0d5c6b;margin-bottom:8px">Procedimientos a ejecutar</div>
+            <ol style="margin-left:18px;color:#2d2d2d;font-size:13.5px;line-height:1.8">
+              <li>Obtener el consolidado anual de los Formularios 350 presentados (12 meses si es mensual, o los períodos que correspondan).</li>
+              <li>Sumar las retenciones por concepto: Renta (salarios, servicios, honorarios, compras, etc.), IVA (retención IVA) y Timbre si aplica.</li>
+              <li>Comparar ese total contra el total de retenciones del campo "retención en la fuente renta" del Formato 1001 agrupado por concepto análogo.</li>
+              <li>Diferencias tolerables: cero. Cualquier diferencia superior a 1 UVT debe explicarse (puede haber retenciones de años anteriores incluidas, o retenciones no declaradas).</li>
+              <li>Verificar también que las <strong>autorretenciones</strong> no estén mezcladas con retenciones a terceros en el 1001 (error frecuente).</li>
+            </ol>
+          </div>
+          <div style="background:#fef8e7;border-left:3px solid #d4a017;border-radius:6px;padding:12px 16px;margin-bottom:14px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#b8860b;margin-bottom:6px">Papel de trabajo sugerido — PT-07</div>
+            <p style="font-size:13px;color:#2d2d2d;margin:0">Cuadro de conciliación: columnas → Concepto de retención | Total F350 (suma 12 meses) | Total F1001 | Diferencia | Explicación. Firma del auditor que ejecutó el procedimiento y fecha.</p>
+          </div>
+          <div style="background:#fdeeec;border-left:3px solid #c0392b;border-radius:6px;padding:12px 16px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#c0392b;margin-bottom:6px">Criterio de conclusión</div>
+            <p style="font-size:13px;color:#2d2d2d;margin:0">Diferencia = 0 → conclusión sin salvedad. Diferencia explicada y razonable → conclusión con nota aclaratoria. Diferencia inexplicable superior a materialidad → hallazgo de auditoría, se solicita corrección antes del envío.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- P-08 -->
+      <div style="border:1px solid #e0e0e0;border-radius:10px;margin-bottom:18px;overflow:hidden">
+        <div style="background:#f0f6f8;padding:16px 20px;display:flex;align-items:center;gap:14px;border-bottom:1px solid #e0e0e0">
+          <div style="width:36px;height:36px;background:#0d5c6b;color:white;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:13px;flex-shrink:0">P08</div>
+          <div>
+            <div style="font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:17px;color:#1a1a1a">Cruce Formato 1007 vs. Declaración de Renta</div>
+            <div style="font-size:12px;color:#757575;margin-top:2px">Riesgo: ingresos reportados a DIAN inconsistentes con los declarados · Prioridad: ⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+        <div style="padding:20px 22px">
+          <p style="color:#424242;margin-bottom:12px"><strong>Objetivo:</strong> Asegurar que los ingresos brutos del Formato 1007 sean consistentes con los ingresos brutos declarados en la declaración de renta (Formulario 110 o 210 según corresponda).</p>
+          <div style="background:#e8f4f7;border-left:3px solid #0d5c6b;border-radius:6px;padding:14px 16px;margin-bottom:14px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#0d5c6b;margin-bottom:8px">Procedimientos a ejecutar</div>
+            <ol style="margin-left:18px;color:#2d2d2d;font-size:13.5px;line-height:1.8">
+              <li>Obtener la declaración de renta del año (puede ser el borrador si aún no se ha presentado) y ubicar el renglón de ingresos brutos.</li>
+              <li>Comparar ese valor con el total de los conceptos 4001 + 4002 + 4003 + demás conceptos del Formato 1007 (suma total de ingresos reportados).</li>
+              <li>La diferencia aceptable es la explicada por ingresos no constitutivos de renta (INCRGO — reportados en el 2275) y por ingresos excluidos de IVA no reportados en el 1007. Toda diferencia debe estar documentada.</li>
+              <li>Verificar que los ingresos por concepto 4019 (ganancia ocasional) cuadren con la base de ganancia ocasional de la declaración de renta.</li>
+              <li>Para TDH: cruzar específicamente los ingresos por fletes (4001) contra el registro en el módulo de facturación o cartera.</li>
+            </ol>
+          </div>
+          <div style="background:#fef8e7;border-left:3px solid #d4a017;border-radius:6px;padding:12px 16px;margin-bottom:14px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#b8860b;margin-bottom:6px">Papel de trabajo sugerido — PT-08</div>
+            <p style="font-size:13px;color:#2d2d2d;margin:0">Conciliación ingresos: Total 1007 | (+) INCRGO (2275) | (+) Ingresos no reportados justificados | (=) Ingresos brutos declarados. Adjuntar el renglón de la declaración de renta y los soportes de cada partida conciliadora.</p>
+          </div>
+          <div style="background:#fdeeec;border-left:3px solid #c0392b;border-radius:6px;padding:12px 16px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#c0392b;margin-bottom:6px">Criterio de conclusión</div>
+            <p style="font-size:13px;color:#2d2d2d;margin:0">La conciliación debe cuadrar. Diferencias no explicadas superiores a materialidad = hallazgo con solicitud de corrección obligatoria. La DIAN cruza exactamente esto en sus procesos de fiscalización.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- P-09 -->
+      <div style="border:1px solid #e0e0e0;border-radius:10px;margin-bottom:18px;overflow:hidden">
+        <div style="background:#f0f6f8;padding:16px 20px;display:flex;align-items:center;gap:14px;border-bottom:1px solid #e0e0e0">
+          <div style="width:36px;height:36px;background:#0d5c6b;color:white;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:13px;flex-shrink:0">P09</div>
+          <div>
+            <div style="font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:17px;color:#1a1a1a">Cruce IVA — Formatos 1005 y 1006 vs. Declaraciones de IVA</div>
+            <div style="font-size:12px;color:#757575;margin-top:2px">Riesgo: IVA reportado inconsistente con el declarado · Prioridad: ⭐⭐⭐⭐</div>
+          </div>
+        </div>
+        <div style="padding:20px 22px">
+          <p style="color:#424242;margin-bottom:12px"><strong>Objetivo:</strong> Verificar que el IVA descontable (1005) e IVA generado (1006) reportados correspondan exactamente a los valores de las declaraciones bimestrales o cuatrimestrales de IVA del año.</p>
+          <div style="background:#e8f4f7;border-left:3px solid #0d5c6b;border-radius:6px;padding:14px 16px;margin-bottom:14px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#0d5c6b;margin-bottom:8px">Procedimientos a ejecutar</div>
+            <ol style="margin-left:18px;color:#2d2d2d;font-size:13.5px;line-height:1.8">
+              <li>Consolidar todas las declaraciones de IVA del año (Formularios 300) sumando: IVA generado total, IVA descontable total, IVA por pagar/a favor por período.</li>
+              <li>Comparar el total del Formato 1005 (IVA descontable) contra el total de IVA descontable de los Formularios 300.</li>
+              <li>Comparar el total del Formato 1006 (IVA generado) contra el total de IVA generado de los Formularios 300.</li>
+              <li>Para TDH: verificar que el servicio de transporte de carga nacional (excluido de IVA) no genera IVA generado en el 1006 — si aparece, puede ser un error.</li>
+              <li>Confirmar que el IVA reportado corresponde solo a facturas electrónicas válidas (CUFE verificado).</li>
+            </ol>
+          </div>
+          <div style="background:#fef8e7;border-left:3px solid #d4a017;border-radius:6px;padding:12px 16px;margin-bottom:14px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#b8860b;margin-bottom:6px">Papel de trabajo sugerido — PT-09</div>
+            <p style="font-size:13px;color:#2d2d2d;margin:0">Tabla de conciliación IVA: por período (bimestre/cuatrimestre): IVA declarado | IVA en formato | Diferencia | Explicación. Total anual en la fila final. Adjuntar pantallazos de cada declaración presentada.</p>
+          </div>
+          <div style="background:#fdeeec;border-left:3px solid #c0392b;border-radius:6px;padding:12px 16px">
+            <div style="font-size:11px;font-weight:700;text-width:700;text-transform:uppercase;letter-spacing:1px;color:#c0392b;margin-bottom:6px">Criterio de conclusión</div>
+            <p style="font-size:13px;color:#2d2d2d;margin:0">Cuadre exacto = conclusión limpia. Diferencias por correcciones de períodos anteriores deben documentarse. Diferencias injustificadas = hallazgo con corrección obligatoria antes del envío.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- P-10 -->
+      <div style="border:1px solid #e0e0e0;border-radius:10px;margin-bottom:18px;overflow:hidden">
+        <div style="background:#f0f6f8;padding:16px 20px;display:flex;align-items:center;gap:14px;border-bottom:1px solid #e0e0e0">
+          <div style="width:36px;height:36px;background:#0d5c6b;color:white;border-radius:8px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:13px;flex-shrink:0">P10</div>
+          <div>
+            <div style="font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:17px;color:#1a1a1a">Verificación de pagos a trabajadores (Formato 2276)</div>
+            <div style="font-size:12px;color:#757575;margin-top:2px">Riesgo: incluir rentas de trabajo en el 1001 o viceversa · Prioridad: ⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+        <div style="padding:20px 22px">
+          <p style="color:#424242;margin-bottom:12px"><strong>Objetivo:</strong> Verificar que todos los pagos a empleados (rentas de trabajo) están en el Formato 2276 y <strong>ninguno</strong> está duplicado en el Formato 1001.</p>
+          <div style="background:#e8f4f7;border-left:3px solid #0d5c6b;border-radius:6px;padding:14px 16px;margin-bottom:14px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#0d5c6b;margin-bottom:8px">Procedimientos a ejecutar</div>
+            <ol style="margin-left:18px;color:#2d2d2d;font-size:13.5px;line-height:1.8">
+              <li>Obtener el listado de empleados del año con sus cédulas y salarios totales pagados (del módulo de nómina o certificados de ingresos y retenciones).</li>
+              <li>Cruzar las cédulas del Formato 2276 contra las cédulas que aparecen en el Formato 1001 — ninguna debe estar en ambos por el mismo concepto laboral.</li>
+              <li>Verificar que el total de la nómina del año (sueldos + prestaciones + cesantías + primas) cuadre con el total del Formato 2276.</li>
+              <li>Para conductores de TDH con contrato laboral: confirmar que están en el 2276, no en el 1001 concepto 5004 (Servicios). Este es el error más frecuente en empresas de transporte.</li>
+              <li>Revisar que los <strong>conductores independientes</strong> (con NIT propio, sin contrato laboral) sí estén en el 1001 concepto 5004.</li>
+              <li>Verificar que las <strong>retenciones de nómina</strong> del 2276 cuadren con las retenciones de salarios del Formulario 350.</li>
+            </ol>
+          </div>
+          <div style="background:#fef8e7;border-left:3px solid #d4a017;border-radius:6px;padding:12px 16px;margin-bottom:14px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#b8860b;margin-bottom:6px">Papel de trabajo sugerido — PT-10</div>
+            <p style="font-size:13px;color:#2d2d2d;margin:0">Conciliación nómina: Total nómina contable | Total 2276 | Diferencia | Explicación. Lista de empleados con tipo de vinculación: (L) Laboral → 2276 / (I) Independiente → 1001. Adjuntar la nómina consolidada del año.</p>
+          </div>
+          <div style="background:#fdeeec;border-left:3px solid #c0392b;border-radius:6px;padding:12px 16px">
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#c0392b;margin-bottom:6px">Criterio de conclusión</div>
+            <p style="font-size:13px;color:#2d2d2d;margin:0">Ningún empleado con contrato laboral puede aparecer en el 1001 como proveedor de servicios. Si se encuentra, es un hallazgo material que debe corregirse antes del envío — puede implicar diferencias en la declaración de renta y en la retención declarada.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- P-11 al P-16: resumen compacto -->
+      <div style="background:#f5f7f3;border:1px solid #e0e0e0;border-radius:10px;padding:22px;margin-bottom:18px">
+        <div style="font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:18px;color:#1a1a1a;margin-bottom:16px">Procedimientos adicionales de Fase II (P11–P16)</div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px">
+          <div style="background:white;border:1px solid #e0e0e0;border-radius:8px;padding:16px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+              <div style="width:28px;height:28px;background:#0d5c6b;color:white;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:11px;flex-shrink:0">P11</div>
+              <strong style="font-size:14px;color:#1a1a1a">Pasivos y cuentas por cobrar (1009 vs 1008)</strong>
+            </div>
+            <p style="font-size:13px;color:#424242;margin:0">Cruzar saldo de pasivos del 1009 contra el balance general de cuentas por pagar a 31-dic. Cruzar saldo del 1008 contra la cartera a 31-dic. Verificar que el deterioro (1318) corresponda al deterioro fiscal reconocido en la declaración de renta. <em>PT-11: Hoja de conciliación balance vs. formato.</em></p>
+          </div>
+          <div style="background:white;border:1px solid #e0e0e0;border-radius:8px;padding:16px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+              <div style="width:28px;height:28px;background:#0d5c6b;color:white;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:11px;flex-shrink:0">P12</div>
+              <strong style="font-size:14px;color:#1a1a1a">Saldos de cuentas bancarias (1012)</strong>
+            </div>
+            <p style="font-size:13px;color:#424242;margin:0">Conciliar el saldo reportado en el Formato 1012 contra los extractos bancarios de diciembre. Cada cuenta bancaria reportada debe tener su extracto de respaldo. Verificar que no falte ninguna cuenta activa. <em>PT-12: Cruce extracto vs. formato 1012.</em></p>
+          </div>
+          <div style="background:white;border:1px solid #e0e0e0;border-radius:8px;padding:16px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+              <div style="width:28px;height:28px;background:#0d5c6b;color:white;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:11px;flex-shrink:0">P13</div>
+              <strong style="font-size:14px;color:#1a1a1a">Verificación de socios — Formato 1010</strong>
+            </div>
+            <p style="font-size:13px;color:#424242;margin:0">Verificar que la composición accionaria reportada coincide con el libro de accionistas o el Registro Mercantil a 31-dic. Los porcentajes deben sumar 100%. Confirmar que no hubo cambios societarios pendientes de registrar. <em>PT-13: Cuadro de socios vs. libro de actas.</em></p>
+          </div>
+          <div style="background:white;border:1px solid #e0e0e0;border-radius:8px;padding:16px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+              <div style="width:28px;height:28px;background:#0d5c6b;color:white;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:11px;flex-shrink:0">P14</div>
+              <strong style="font-size:14px;color:#1a1a1a">Validación con Prevalidador DIAN</strong>
+            </div>
+            <p style="font-size:13px;color:#424242;margin:0">Solicitar al área contable el reporte de resultado del Prevalidador Tributario DIAN para cada formato. Todo error reportado por el Prevalidador debe estar corregido antes del envío. Cero errores = condición para envío. <em>PT-14: Adjuntar pantallazos del Prevalidador sin errores.</em></p>
+          </div>
+          <div style="background:white;border:1px solid #e0e0e0;border-radius:8px;padding:16px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+              <div style="width:28px;height:28px;background:#0d5c6b;color:white;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:11px;flex-shrink:0">P15</div>
+              <strong style="font-size:14px;color:#1a1a1a">Revisión de conceptos — clasificación correcta</strong>
+            </div>
+            <p style="font-size:13px;color:#424242;margin:0">Para una muestra de los 20 mayores pagos del 1001, verificar que el concepto DIAN usado sea el correcto según la naturaleza del pago (ej: que honorarios no estén en servicios, que compra de activo fijo no esté en costos). <em>PT-15: Muestra de pagos con concepto verificado.</em></p>
+          </div>
+          <div style="background:white;border:1px solid #e0e0e0;border-radius:8px;padding:16px">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+              <div style="width:28px;height:28px;background:#0d5c6b;color:white;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:11px;flex-shrink:0">P16</div>
+              <strong style="font-size:14px;color:#1a1a1a">Revisión de versiones correctas de formatos</strong>
+            </div>
+            <p style="font-size:13px;color:#424242;margin:0">Verificar que cada archivo XML usa la versión del formato establecida en la Resolución 000227/2025 (ej: 1001 v10, 1003 v7, 1007 v9, 1009 v7, etc.). Versión incorrecta = rechazo automático del Prevalidador. <em>PT-16: Tabla de versiones verificadas.</em></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===================== FASE III ===================== -->
+  <div id="fase3" style="background:white;border:1px solid #e0e0e0;border-radius:14px;margin-bottom:20px;overflow:hidden">
+    <div style="background:linear-gradient(135deg,#7a5500,#b8860b,#d4a017);padding:22px 32px;color:white">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.4px;color:#fff8e0;margin-bottom:8px">FASE III · DESPUÉS DEL REPORTE</div>
+      <h2 style="font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:24px;letter-spacing:-.3px">Cierre y archivo</h2>
+      <p style="font-size:14px;opacity:.9;margin-top:8px;max-width:600px">Procedimientos de cierre: verificación del envío exitoso, archivo de evidencias, comunicación de resultados y preparación para el siguiente ciclo.</p>
+    </div>
+    <div style="padding:32px">
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-bottom:24px">
+
+        <div style="border:1px solid #e8d7a0;border-radius:10px;overflow:hidden">
+          <div style="background:#fef8e7;padding:14px 18px;display:flex;align-items:center;gap:12px;border-bottom:1px solid #e8d7a0">
+            <div style="width:32px;height:32px;background:#d4a017;color:white;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:12px;flex-shrink:0">P17</div>
+            <strong style="font-size:15px;color:#1a1a1a">Verificación del acuse de recibo DIAN</strong>
+          </div>
+          <div style="padding:16px 18px;font-size:13.5px;color:#424242">
+            <p style="margin-bottom:10px">Obtener y archivar el <strong>acuse de recibo oficial de la DIAN</strong> para cada formato presentado. Este documento es la única evidencia válida de que el reporte fue recibido exitosamente.</p>
+            <p style="margin-bottom:10px">Verificar: fecha de presentación (dentro del plazo), número de radicación, NIT del informante, formato y versión, número de registros aceptados.</p>
+            <div style="background:#fef8e7;border-left:3px solid #d4a017;border-radius:5px;padding:10px 12px;font-size:12.5px"><strong>PT-17:</strong> Carpeta digital con acuses de recibo en PDF, organizados por formato. Verificar que el número de registros aceptados coincide con los registros enviados.</div>
+          </div>
+        </div>
+
+        <div style="border:1px solid #e8d7a0;border-radius:10px;overflow:hidden">
+          <div style="background:#fef8e7;padding:14px 18px;display:flex;align-items:center;gap:12px;border-bottom:1px solid #e8d7a0">
+            <div style="width:32px;height:32px;background:#d4a017;color:white;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:12px;flex-shrink:0">P18</div>
+            <strong style="font-size:15px;color:#1a1a1a">Informe de Revisoría Fiscal — Exógena</strong>
+          </div>
+          <div style="padding:16px 18px;font-size:13.5px;color:#424242">
+            <p style="margin-bottom:10px">Elaborar el <strong>informe de Revisoría Fiscal sobre el reporte de información exógena</strong> dirigido al representante legal y a la junta directiva.</p>
+            <p style="margin-bottom:10px">El informe debe incluir: alcance del trabajo, procedimientos ejecutados, hallazgos encontrados (con su calificación de riesgo), correcciones realizadas antes del envío, conclusión general y recomendaciones para el siguiente año.</p>
+            <div style="background:#fef8e7;border-left:3px solid #d4a017;border-radius:5px;padding:10px 12px;font-size:12.5px"><strong>PT-18:</strong> Informe firmado por el Revisor Fiscal titular, con fecha, y constancia de entrega al representante legal. Formato carta en papel membretado de la Revisoría Fiscal.</div>
+          </div>
+        </div>
+
+        <div style="border:1px solid #e8d7a0;border-radius:10px;overflow:hidden">
+          <div style="background:#fef8e7;padding:14px 18px;display:flex;align-items:center;gap:12px;border-bottom:1px solid #e8d7a0">
+            <div style="width:32px;height:32px;background:#d4a017;color:white;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:12px;flex-shrink:0">P19</div>
+            <strong style="font-size:15px;color:#1a1a1a">Archivo del expediente de papeles de trabajo</strong>
+          </div>
+          <div style="padding:16px 18px;font-size:13.5px;color:#424242">
+            <p style="margin-bottom:10px">Consolidar en un expediente digital (y/o físico) todos los papeles de trabajo PT-01 a PT-18, organizados por fase, numerados y con los documentos de soporte adjuntos.</p>
+            <p style="margin-bottom:10px">El expediente debe conservarse <strong>mínimo 5 años</strong> (término de firmeza de las declaraciones tributarias en Colombia — Art. 714 E.T.) y estar disponible para cualquier requerimiento de la DIAN o proceso de auditoría externa.</p>
+            <div style="background:#fef8e7;border-left:3px solid #d4a017;border-radius:5px;padding:10px 12px;font-size:12.5px"><strong>PT-19:</strong> Índice del expediente: lista de todos los PT con descripción, fecha de elaboración, elaborado por, revisado por, y ubicación del archivo digital.</div>
+          </div>
+        </div>
+
+        <div style="border:1px solid #e8d7a0;border-radius:10px;overflow:hidden">
+          <div style="background:#fef8e7;padding:14px 18px;display:flex;align-items:center;gap:12px;border-bottom:1px solid #e8d7a0">
+            <div style="width:32px;height:32px;background:#d4a017;color:white;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:12px;flex-shrink:0">P20</div>
+            <strong style="font-size:15px;color:#1a1a1a">Monitoreo post-envío — Respuesta DIAN</strong>
+          </div>
+          <div style="padding:16px 18px;font-size:13.5px;color:#424242">
+            <p style="margin-bottom:10px">Durante los 6 meses siguientes al envío, monitorear la bandeja del portal MUISCA y los correos corporativos por posibles <strong>requerimientos de información, pliegos de cargo o notificaciones de inconsistencias</strong> de la DIAN.</p>
+            <p style="margin-bottom:10px">Si llega un requerimiento: identificar el formato y el período al que hace referencia, localizar el expediente de papeles de trabajo y coordinar la respuesta dentro del plazo legal (1 mes prorrogable).</p>
+            <div style="background:#fdeeec;border-left:3px solid #c0392b;border-radius:5px;padding:10px 12px;font-size:12.5px"><strong>Alerta:</strong> Los requerimientos de la DIAN tienen plazos fatales. Nunca dejar vencer un requerimiento sin respuesta — la sanción por no responder es independiente de la sanción por la inconsistencia original.</div>
+          </div>
+        </div>
+
+        <div style="border:1px solid #e8d7a0;border-radius:10px;overflow:hidden">
+          <div style="background:#fef8e7;padding:14px 18px;display:flex;align-items:center;gap:12px;border-bottom:1px solid #e8d7a0">
+            <div style="width:32px;height:32px;background:#d4a017;color:white;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:12px;flex-shrink:0">P21</div>
+            <strong style="font-size:15px;color:#1a1a1a">Retroalimentación y mejora continua</strong>
+          </div>
+          <div style="padding:16px 18px;font-size:13.5px;color:#424242">
+            <p style="margin-bottom:10px">Dentro de los 30 días siguientes al cierre del reporte, realizar una reunión de retroalimentación con el área contable para revisar los hallazgos del año, identificar causas raíz y definir acciones preventivas para el siguiente período.</p>
+            <p style="margin-bottom:10px">Actualizar este programa de auditoría con los aprendizajes: nuevos riesgos identificados, procedimientos que deben reforzarse, cambios normativos que modifiquen los formatos o conceptos.</p>
+            <div style="background:#e8f5ec;border-left:3px solid #1e7a3e;border-radius:5px;padding:10px 12px;font-size:12.5px"><strong>Buena práctica:</strong> Guardar las observaciones de este año como el punto de partida del programa del año siguiente. La memoria institucional de la Revisoría Fiscal es un activo que se construye año a año.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- RESUMEN DE CONCLUSIONES -->
+  <div style="background:white;border:1px solid #e0e0e0;border-radius:14px;padding:32px;margin-bottom:20px">
+    <h2 style="font-family:'Fraunces',Georgia,serif;font-weight:700;font-size:22px;color:#1a1a1a;margin-bottom:20px;letter-spacing:-.3px">Criterios globales de conclusión del programa</h2>
+    <p style="color:#424242;margin-bottom:20px">Al finalizar las tres fases, el equipo de Revisoría Fiscal debe poder emitir una conclusión general sobre el reporte de información exógena de TDH. A continuación, los criterios objetivos para cada nivel de conclusión:</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px">
+      <div style="background:#e8f5ec;border:1px solid #b8dfc4;border-left:4px solid #1e7a3e;border-radius:10px;padding:20px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:#1e7a3e;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">✅ Conclusión limpia</div>
+        <ul style="margin-left:16px;font-size:13px;color:#2d2d2d;line-height:1.8">
+          <li>Todos los cruces cuadran</li>
+          <li>NITs verificados correctos</li>
+          <li>Sin hallazgos materiales</li>
+          <li>Prevalidador sin errores</li>
+          <li>Presentación dentro del plazo</li>
+          <li>Acuse de recibo obtenido</li>
+        </ul>
+      </div>
+      <div style="background:#fef8e7;border:1px solid #e8d7a0;border-left:4px solid #d4a017;border-radius:10px;padding:20px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:#b8860b;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">⚠️ Conclusión con salvedades</div>
+        <ul style="margin-left:16px;font-size:13px;color:#2d2d2d;line-height:1.8">
+          <li>Diferencias menores explicadas</li>
+          <li>Hallazgos corregidos antes del envío</li>
+          <li>Debilidades de control documentadas</li>
+          <li>Recomendaciones emitidas por escrito</li>
+          <li>Reporte presentado en plazo</li>
+        </ul>
+      </div>
+      <div style="background:#fdeeec;border:1px solid #f5c6c0;border-left:4px solid #c0392b;border-radius:10px;padding:20px">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:#c0392b;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">❌ Hallazgo de importancia relativa</div>
+        <ul style="margin-left:16px;font-size:13px;color:#2d2d2d;line-height:1.8">
+          <li>Diferencias sin explicación &gt; materialidad</li>
+          <li>Errores no corregidos antes del envío</li>
+          <li>Extemporaneidad en la presentación</li>
+          <li>Formatos omitidos</li>
+          <li>NITs incorrectos en &gt;10% de la muestra</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
   </main>
 </div>
 <footer>
